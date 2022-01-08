@@ -29,7 +29,7 @@ def square_seq_r(seq):
         return (seq[0] ** 2,) + square_seq_r(seq[1:])
 
 def map(fn, seq):
-    if seq == ():
+    if seq == () or seq == []:
         return ()
     else:
         return (fn(seq[0]), ) + map(fn, seq[1:])
